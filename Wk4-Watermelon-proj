@@ -1,0 +1,65 @@
+/*
+Filename:       hw8_watermelon.cpp
+Author:         Max Taylor
+Date:           2/4/2019
+*/
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    //Declaring variables
+    int t;              // time (seconds)
+    double distance, height;
+
+
+    // asking and getting inputs from user
+    
+do{
+    
+    cout << "what is the height of the bridge, in meters?   ";
+    cin >> height;
+    if(height <= 0)
+    cout << "Invalid height. Must be greater than 0 \n";         //validates, makes repeat for new input
+    else;
+    }while (height<=0);         //validates
+    
+
+
+    do{
+        
+    cout << "How long did the watermelon fall, in seconds?  ";
+    cin >> t;
+    
+    if (t <=0)
+    cout << "Invalid seconds. Must be greater than 0 \n";            //validates
+    else;
+    }while (t<=0);                   //validates
+
+
+    //outputting results
+    cout << "Time falling (Seconds)          Distance Fallen (meters)" << endl;
+    cout << "********************          **********************" << endl;
+    
+    int array[10];
+    for (int i = 0; i <= t; i++) {  // counter
+        distance = 0.5 * 9.8 * i * i;
+        cout << i << "                             " << distance << endl;
+    }
+    
+    
+    
+    if (distance > height)
+        cout << "Time error. Bridge is not that high." << endl;
+        
+        
+        
+        
+    return 0;
+    
+    
+    
+    
+    
+}
